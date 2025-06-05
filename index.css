@@ -1,0 +1,93 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+.roulette-container {
+  background-color: #aeaeae;
+  position: relative;
+  border: 1px solid #b1b1b1;
+  width: 45%;
+  margin: 20px auto;
+  border-radius: 2px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  box-shadow: inset #000;
+  overflow: hidden;
+}
+
+@media (width < 768px) {
+  .roulette-container {
+    width: 90%;
+  }
+}
+
+#roulette-wheel {
+  height: 180px;
+  position: relative;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.roulette-container::before {
+  content: "";
+  position: absolute;
+  display: flex;
+  justify-self: center;
+  width: 5px;
+  height: 120px;
+  z-index: 1;
+  background-color: #ffffffdc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+h1 {
+  color: #333;
+}
+
+.roulette-item {
+  min-width: 100px;
+  height: 100px;
+  color: #fff;
+  border-radius: 10%;
+  line-height: 50px;
+  display: inline-block;
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.roulette-item.red {
+  background-color: #ff0000;
+}
+
+.roulette-item.black {
+  background-color: #000;
+}
+
+.roulette-item.white {
+  background-color: #fff;
+}
+
+.roulette-item.white span {
+  color: #000;
+  border-color: #000;
+}
+
+.roulette-item span {
+  border: 2px solid #fff;
+  border-radius: 50%;
+  font-weight: 500;
+  font-size: 2rem;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
